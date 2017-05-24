@@ -1,0 +1,11 @@
+<modal #modal animation="true" (onClose)="onErrorHandled()">
+    <modal-header>
+        <h4 class="modal-title">{{ error?.title }}</h4>
+    </modal-header>
+    <modal-body>
+        {{ error?.message }}
+    </modal-body>
+    <modal-footer>
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="modal.close()">OK</button>
+    </modal-footer>
+</modal>

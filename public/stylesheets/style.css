@@ -1,0 +1,34 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  word-break: break-word;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1{
+  text-align: center;
+  color: #9933ff
+}
+
+h3{
+  text-align: center;
+  color: #9933ff
+}
+
+.small-error {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: red;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
