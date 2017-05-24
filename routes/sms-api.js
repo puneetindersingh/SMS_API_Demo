@@ -81,7 +81,6 @@ router.get('/:messageID/:token', function(req, res, next) {
            'bearer': req.params.token 
         }
     }, function(err, result) {
-        console.log(result);
         if(err) {
             return res.status(500).json({
                 title: 'An error occured!',
