@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { CustomFormsModule } from 'ng2-validation';
 import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
 
 /**
@@ -14,14 +13,12 @@ import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        CustomFormsModule,
         Ng2Bs3ModalModule
     ],
     exports: [
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        CustomFormsModule,
         Ng2Bs3ModalModule
     ]
 })

@@ -22,7 +22,6 @@ export class APIComponent {
     // when user clicks submit
     onSubmit() {
         // check if a token already exists
-        //if(!this.apiService.access_token) {
         if(!localStorage.getItem('access_token')) {
             // if not then get the token and send the SMS
             this.apiService.getToken().subscribe(
@@ -53,7 +52,9 @@ export class APIComponent {
             (data: any) => {
                 // messageId returns as a full url, but we only need everything after the last / as that is
                 // the actual messageId
-                this.messageID = data[0].messageId.substr(data[0].messageId.lastIndexOf('/') + 1);
+                if(data.messageID) {
+                    this.messageID = data[0].messageId.substr(data[0].messageId.lastIndexOf('/') + 1);
+                }
                 this.responses.push(JSON.stringify(data));
             },
             (error: any) => {
@@ -80,7 +81,6 @@ export class APIComponent {
         this.smsForm.reset();
         this.responses = [];
         localStorage.clear();
-        //this.apiService.access_token = null;
         this.messageID = null;
     }
 

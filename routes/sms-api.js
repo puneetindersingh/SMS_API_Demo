@@ -42,6 +42,7 @@ router.post('/', function(req, res, next) {
 
 // send the SMS
 router.post('/send', function(req, res, next) {
+    console.log(req.body);
     // json is our raw json data body and auth: 'bearer' is required for oAuth2.
     // the from field is optional
     request({
@@ -52,7 +53,6 @@ router.post('/send', function(req, res, next) {
         },
         json: {
             to: req.body.phoneNumber,
-            //from: '+61400000000',
             body: req.body.message
         }
     }, function(err, result) {

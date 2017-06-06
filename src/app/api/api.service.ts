@@ -14,8 +14,8 @@ import { ErrorService } from '../errors/error.service';
 export class APIService {
     // client id and secret obtained from signing up to the API on the s.dev portal.
     // you can use these or replace them with your own. 
-    client_id = 'client_id goes here';
-    client_secret = 'client_secret goes here';
+    client_id = 'client_id';
+    client_secret = 'client_secret';
 
     constructor(private http: Http, private router: Router, private errorService: ErrorService) {}
 
